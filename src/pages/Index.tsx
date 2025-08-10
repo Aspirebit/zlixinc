@@ -45,8 +45,6 @@ const Index = () => {
               <div className="flex items-center justify-center gap-2"><Globe2 className="opacity-70" /> North America focus</div>
               <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 100k+ Sales/month</div>
               <div className="flex items-center justify-center gap-2"><Check className="opacity-70" /> 10+ brands worldwide</div>
-              <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 7 Figure Revenue/year</div>
-
             </div>
           </div>
         </section>
