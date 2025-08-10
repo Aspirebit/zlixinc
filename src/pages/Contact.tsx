@@ -162,7 +162,7 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle>Ready to Partner With Us?</CardTitle>
                   <CardDescription>
-                    Join our network of successful brands and start generating six-figure revenue 
+                    Join our network of successful brands and start generating seven-figure revenue 
                     through our Amazon wholesale expertise.
                   </CardDescription>
                 </CardHeader>

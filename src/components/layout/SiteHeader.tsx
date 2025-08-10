@@ -6,19 +6,20 @@ const SiteHeader = () => {
     <header className="sticky top-0 z-40 w-full border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="font-semibold tracking-tight">
-          MarketBridge Wholesale
+          ZLIX INC
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="#about" className="hover:text-foreground transition-colors">About</a>
-          <a href="#services" className="hover:text-foreground transition-colors">Services</a>
-          <a href="#marketplaces" className="hover:text-foreground transition-colors">Marketplaces</a>
-          <a href="#process" className="hover:text-foreground transition-colors">Process</a>
-          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+          <a href="/#about" className="hover:text-foreground transition-colors">About</a>
+          <a href="/#services" className="hover:text-foreground transition-colors">Services</a>
+          <a href="/#marketplaces" className="hover:text-foreground transition-colors">Marketplaces</a>
+          <a href="/#process" className="hover:text-foreground transition-colors">Process</a>
+          <Link to="/case-studies" className="hover:text-foreground transition-colors">Case Studies</Link>
+          <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
         </nav>
         <div className="flex items-center gap-2">
-          <a href="#contact">
+          <Link to="/contact">
             <Button variant="hero" size="sm">Partner with us</Button>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

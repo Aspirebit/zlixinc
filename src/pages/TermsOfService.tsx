@@ -33,7 +33,7 @@ const TermsOfService = () => {
                 <p className="text-muted-foreground mb-4">
                   ZLIX INC provides wholesale and marketplace business services, specializing in 
                   Amazon selling worldwide, particularly in the USA, Canada, and Mexico. We generate 
-                  six-figure business revenue per year for our partners.
+                  seven-figure business revenue per year for our partners.
                 </p>
               </section>
 

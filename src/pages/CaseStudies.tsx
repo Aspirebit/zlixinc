@@ -1,0 +1,51 @@
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { caseStudies } from "./case-studies/data";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+const CaseStudies = () => {
+  return (
+    <div className="container py-16 md:py-20">
+      <Helmet>
+        <title>Amazon Case Studies - ZLIX INC</title>
+        <meta name="description" content="Real Amazon results: 7-figure run rates, 100k+ monthly units across 10+ brands. Explore ZLIX INC case studies." />
+        <link rel="canonical" href="https://yourbrand.com/case-studies" />
+      </Helmet>
+
+      <header className="text-center max-w-3xl mx-auto mb-12">
+        <h1 className="text-4xl font-semibold tracking-tight">Amazon Case Studies</h1>
+        <p className="mt-3 text-muted-foreground">
+          Proof of performance across the US, Canada, and Mexico marketplaces. We partner long-term and scale responsibly.
+        </p>
+      </header>
+
+      <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {caseStudies.map((cs) => (
+          <Card key={cs.slug}>
+            <CardHeader>
+              <CardTitle>{cs.title}</CardTitle>
+              <CardDescription>{cs.category} • {cs.timeframe}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">{cs.summary}</p>
+              <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
+                <div className="rounded-md border p-3"><strong>Revenue</strong><div className="text-muted-foreground">{cs.metrics.revenueLift}</div></div>
+                <div className="rounded-md border p-3"><strong>Units/mo</strong><div className="text-muted-foreground">{cs.metrics.unitsPerMonth}</div></div>
+                <div className="rounded-md border p-3"><strong>Buy Box</strong><div className="text-muted-foreground">{cs.metrics.buyBox}</div></div>
+                <div className="rounded-md border p-3"><strong>Reviews</strong><div className="text-muted-foreground">{cs.metrics.reviewGrowth}</div></div>
+              </div>
+              <div className="mt-6">
+                <Button asChild>
+                  <Link to={`/case-studies/${cs.slug}`}>Read case study</Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
+    </div>
+  );
+};
+
+export default CaseStudies;

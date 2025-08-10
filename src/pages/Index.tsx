@@ -1,8 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Check, Globe2, Shield, ShoppingBag } from "lucide-react";
-import SiteHeader from "@/components/layout/SiteHeader";
-import SiteFooter from "@/components/layout/SiteFooter";
 
 const Index = () => {
   return (
@@ -14,7 +12,7 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "MarketBridge Wholesale",
+          name: "ZLIX INC",
           url: "https://yourbrand.com/",
           areaServed: ["US", "CA", "MX"],
           description: "Amazon wholesale and marketplace growth partner",
@@ -26,7 +24,7 @@ const Index = () => {
         })}</script>
       </Helmet>
 
-      <SiteHeader />
+      
 
       <main>
         {/* Hero */}
@@ -36,7 +34,7 @@ const Index = () => {
               Trusted Amazon Wholesale Partner for Growing Brands
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              We operate at scale on Amazon, with expertise across USA, Canada, and Mexico. Our team also sells on Walmart and eBay — delivering reliable, 6‑figure annual revenue for brand partners.
+              We operate at scale on Amazon, with expertise across USA, Canada, and Mexico. Our team also sells on Walmart and eBay — delivering reliable, 7‑figure annual revenue for brand partners. We work with 10+ brands and move 100k+ products every month.
             </p>
             <div className="mt-8 flex items-center justify-center gap-3">
               <a href="#contact"><Button variant="hero" size="lg">Become a Partner</Button></a>
@@ -44,9 +42,9 @@ const Index = () => {
             </div>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-muted-foreground">
               <div className="flex items-center justify-center gap-2"><Shield className="opacity-70" /> Authorized seller</div>
-              <div className="flex items-center justify-center gap-2"><Globe2 className="opacity-70" /> North America</div>
-              <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> Wholesale only</div>
-              <div className="flex items-center justify-center gap-2"><Check className="opacity-70" /> 6‑figure results</div>
+              <div className="flex items-center justify-center gap-2"><Globe2 className="opacity-70" /> North America focus</div>
+              <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 100k+ products/month</div>
+              <div className="flex items-center justify-center gap-2"><Check className="opacity-70" /> 10+ brands worldwide</div>
             </div>
           </div>
         </section>
@@ -142,9 +140,9 @@ const Index = () => {
           <div className="container py-16 md:py-20">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Let’s grow your brand on Amazon</h2>
-              <p className="mt-3 text-muted-foreground">We typically generate 6‑figure annual revenue for partners. Share your catalog and we’ll get back within 24 hours.</p>
+              <p className="mt-3 text-muted-foreground">We typically generate 7‑figure annual revenue for partners. Share your catalog and we’ll get back within 24 hours.</p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <a href="mailto:partnerships@yourbrand.com" className="w-full">
+                <a href="mailto:sales@zlixinc.com" className="w-full">
                   <Button className="w-full" variant="hero">Email us</Button>
                 </a>
                 <a href="#process" className="w-full">
@@ -157,7 +155,7 @@ const Index = () => {
         </section>
       </main>
 
-      <SiteFooter />
+      
     </div>
   );
 };
