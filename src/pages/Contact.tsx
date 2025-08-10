@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Mail, Phone } from "lucide-react";
-
+import LeadForm from "@/components/forms/LeadForm";
 const Contact = () => {
   return (
     <>
@@ -51,6 +51,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
+                    <p><strong>ZLIX INC</strong></p>
                     <p>76 Riverbrook way SE</p>
                     <p>Calgary, Alberta, T2C3R6</p>
                     <p>Canada</p>
@@ -76,21 +77,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    USA - New York
-                  </CardTitle>
-                  <CardDescription>New York office</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 text-muted-foreground">
-                    <p>New York Office</p>
-                    <p>United States</p>
-                  </div>
-                </CardContent>
-              </Card>
 
               <Card>
                 <CardHeader>
@@ -111,35 +97,33 @@ const Contact = () => {
               </Card>
             </div>
 
+            <div className="mb-12">
+              <Card className="max-w-3xl mx-auto">
+                <CardHeader>
+                  <CardTitle>Tell us about your brand</CardTitle>
+                  <CardDescription>Amazon and Walmart focus. No phone required.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <LeadForm />
+                </CardContent>
+              </Card>
+            </div>
+
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />
-                    Email Addresses
+                    Email Address
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
                     <p>sales@zlixinc.com</p>
-                    <p>harsh@aspirebit.com</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-primary" />
-                    Phone
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-muted-foreground">
-                    <p>+1 (416) 717-7856</p>
-                  </div>
-                </CardContent>
-              </Card>
 
               <Card>
                 <CardHeader>
@@ -151,7 +135,7 @@ const Contact = () => {
                 <CardContent>
                   <div className="text-muted-foreground">
                     <p>Monday - Friday</p>
-                    <p>9:00 AM - 6:00 PM EST</p>
+                    <p>10:00 AM - 5:00 PM MST</p>
                   </div>
                 </CardContent>
               </Card>

@@ -34,7 +34,7 @@ const Index = () => {
               Trusted Amazon Wholesale Partner for Growing Brands
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              We operate at scale on Amazon, with expertise across USA, Canada, and Mexico. Our team also sells on Walmart and eBay — delivering reliable, 7‑figure annual revenue for brand partners. We work with 10+ brands and move 100k+ products every month.
+              We operate at scale on Amazon (primary) and Walmart. We run high‑ROI ads across Amazon, Walmart, Meta, and Google — amplified by 500+ affiliates. 10+ years in digital marketing and 5+ years in Amazon operations.
             </p>
             <div className="mt-8 flex items-center justify-center gap-3">
               <a href="#contact"><Button variant="hero" size="lg">Become a Partner</Button></a>
@@ -101,9 +101,8 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center">Primary marketplaces</h2>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
               {[
-                { name: "Amazon", note: "Core focus worldwide" },
+                { name: "Amazon", note: "Primary growth focus" },
                 { name: "Walmart", note: "Selective assortment" },
-                { name: "eBay", note: "Category-specific" },
               ].map(({ name, note }) => (
                 <div key={name} className="rounded-lg border p-8">
                   <div className="text-lg font-medium">{name}</div>

@@ -76,16 +76,8 @@ const TermsOfService = () => {
                 <h2 className="text-2xl font-semibold text-foreground mb-4">7. Contact Information</h2>
                 <div className="text-muted-foreground">
                   <p className="mb-2"><strong>ZLIX INC</strong></p>
-                  <p className="mb-2">87 Hill Cres, Scarborough, ON, M1M1J3</p>
-                  <p className="mb-2">Mailing: 76 Riverbrook way SE, Calgary, Alberta, T2C3R6</p>
-                  <p className="mb-4">
-                    USA Office: Aspirebit Technolab LLC<br />
-                    18585 Coastal Hwy Unit 10 PMB 1089<br />
-                    Rehoboth Beach, DE 19971-6147, United States
-                  </p>
-                  <p className="mb-2">India Office: SCO 344 orchid harmony, near palanpore firestation, gauravpath road, Pal Adajan surat 395009</p>
-                  <p className="mb-2">Email: sales@zlixinc.com | harsh@aspirebit.com</p>
-                  <p>Phone: +1 (416) 717-7856</p>
+                  <p className="mb-2">87 Hill Cress, Scarborough, ON, M1M1J3</p>
+                  <p className="mb-2">Email: sales@zlixinc.com</p>
                 </div>
               </section>
             </div>
