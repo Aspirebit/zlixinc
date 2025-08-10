@@ -13,6 +13,9 @@ import Layout from "./components/layout/Layout";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import About from "./pages/About";
+import Services from "./pages/Services";
+import Careers from "./pages/Careers";
+import FreeListingAssessment from "./pages/FreeListingAssessment";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +35,9 @@ const App = () => (
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/free-listing-assessment" element={<FreeListingAssessment />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Route>

@@ -11,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 const schema = z.object({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Enter a valid email"),
+  phone: z.string().min(7, "Enter a valid phone").optional(),
   company: z.string().min(2, "Enter your company name"),
   website: z.string().url().optional().or(z.literal("")).optional(),
   marketplace: z.enum(["amazon", "walmart", "both"], { required_error: "Select a marketplace" }),
@@ -28,6 +29,7 @@ const LeadForm = () => {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       company: "",
       website: "",
       marketplace: undefined as unknown as "amazon" | "walmart" | "both",
@@ -42,6 +44,7 @@ const LeadForm = () => {
     const body = [
       `Name: ${values.name}`,
       `Email: ${values.email}`,
+      values.phone ? `Phone: ${values.phone}` : undefined,
       `Company: ${values.company}`,
       values.website ? `Website: ${values.website}` : undefined,
       `Marketplace: ${values.marketplace}`,
@@ -85,20 +88,20 @@ const LeadForm = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
+            <FormField name="phone" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone (optional)</FormLabel>
+                <FormControl>
+                  <Input type="tel" placeholder="+1 555 000 0000" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
             <FormField name="company" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Company</FormLabel>
                 <FormControl>
                   <Input placeholder="Your Company LLC" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="website" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>Website (optional)</FormLabel>
-                <FormControl>
-                  <Input placeholder="https://example.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -156,11 +159,11 @@ const LeadForm = () => {
           )} />
 
           <div className="pt-2">
-            <Button type="submit" size="lg" className="w-full sm:w-auto">Submit lead</Button>
+            <Button type="submit" size="lg" className="w-full sm:w-auto">Submit Lead</Button>
           </div>
         </form>
       </Form>
-      <p className="mt-2 text-xs text-muted-foreground text-center">Your information is sent securely to sales@zlixinc.com. No phone required.</p>
+      <p className="mt-2 text-xs text-muted-foreground text-center">Your information is sent securely to sales@zlixinc.com. Phone is optional.</p>
     </div>
   );
 };

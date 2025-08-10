@@ -13,6 +13,9 @@ const Contact = () => {
       </Helmet>
       
       <div className="min-h-screen bg-background">
+        <div className="w-full">
+          <img src="/images/contact-hero.jpg" alt="Contact ZLIX INC" className="w-full h-56 object-cover" loading="lazy" />
+        </div>
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -22,7 +25,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -58,26 +61,9 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    USA - Delaware
-                  </CardTitle>
-                  <CardDescription>US headquarters</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 text-muted-foreground">
-                    <p><strong>Aspirebit Technolab LLC</strong></p>
-                    <p>18585 Coastal Hwy Unit 10 PMB 1089</p>
-                    <p>Rehoboth Beach, DE 19971-6147</p>
-                    <p>United States</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-
+            <div className="mb-12">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -101,7 +87,7 @@ const Contact = () => {
               <Card className="max-w-3xl mx-auto">
                 <CardHeader>
                   <CardTitle>Tell us about your brand</CardTitle>
-                  <CardDescription>Amazon and Walmart focus. No phone required.</CardDescription>
+                  <CardDescription>Amazon & Walmart focus. Phone is optional.</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <LeadForm />
@@ -109,7 +95,7 @@ const Contact = () => {
               </Card>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-12 justify-center">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -118,12 +104,11 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2 text-muted-foreground">
+                  <div className="space-y-2 text-muted-foreground text-center">
                     <p>sales@zlixinc.com</p>
                   </div>
                 </CardContent>
               </Card>
-
 
               <Card>
                 <CardHeader>
@@ -133,7 +118,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-muted-foreground">
+                  <div className="text-muted-foreground text-center">
                     <p>Monday - Friday</p>
                     <p>10:00 AM - 5:00 PM MST</p>
                   </div>

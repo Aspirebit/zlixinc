@@ -38,7 +38,11 @@ const Index = () => {
             </p>
             <div className="mt-8 flex items-center justify-center gap-3">
               <a href="#contact"><Button variant="hero" size="lg">Become a Partner</Button></a>
-              <a href="#services"><Button variant="outline" size="lg">How we work</Button></a>
+              <a href="/free-listing-assessment"><Button variant="outline" size="lg">Free Listing Assessment</Button></a>
+            </div>
+            <div className="mt-10 flex items-center justify-center gap-10">
+              <img src="/images/amazon.svg" alt="Amazon marketplace" className="h-10 md:h-14 opacity-90" loading="lazy" />
+              <img src="/images/walmart.svg" alt="Walmart marketplace" className="h-10 md:h-14 opacity-90" loading="lazy" />
             </div>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-muted-foreground">
               <div className="flex items-center justify-center gap-2"><Shield className="opacity-70" /> Authorized seller</div>

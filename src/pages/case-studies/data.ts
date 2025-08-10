@@ -15,8 +15,8 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "phone-accessories-india",
-    title: "Phone Accessories (India): 0 ➜ 7‑figure run‑rate",
+    slug: "peeperly-mobile-accessories-india",
+    title: "Peeperly (Mobile Accessories, India): 0 ➜ 7‑figure run‑rate",
     category: "Electronics & Mobile Accessories",
     timeframe: "8 months",
     summary:
@@ -36,8 +36,8 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "beauty-cosmetics-shopify",
-    title: "Beauty & Cosmetics: 7‑figure DTC with Meta & Google Ads",
+    slug: "lamaze-cosmetics-shopify-dtc",
+    title: "Lamaze Cosmetics Pvt Ltd: 7‑figure DTC with Meta & Google Ads",
     category: "Beauty & Personal Care",
     timeframe: "6 months",
     summary:
