@@ -105,3 +105,16 @@ All colors MUST be HSL.
 @layer base {
   html { scroll-behavior: smooth; }
 }
+
+/* ... keep existing code (design tokens and base styles) */
+
+@layer components {
+  .marquee { @apply overflow-hidden relative; }
+  .marquee-inner { @apply flex items-stretch; gap: 0.5rem; animation: marquee-left 30s linear infinite; }
+  .marquee-inner:hover { animation-play-state: paused; }
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

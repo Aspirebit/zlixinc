@@ -4,12 +4,12 @@ const SiteFooter = () => {
   return (
     <footer className="border-t">
       <div className="container py-10 flex flex-col items-center gap-8 text-sm text-muted-foreground">
-        <img src="/lovable-uploads/9967362a-9b29-499c-9477-d392d1eb563a.png" alt="ZLIX INC logo" className="h-16 w-16 rounded-sm" />
+        <img src="/lovable-uploads/9967362a-9b29-499c-9477-d392d1eb563a.png" alt="ZLIX INC logo" className="h-24 w-auto" />
 
         <nav className="flex flex-wrap items-center justify-center gap-6">
           <a href="/" className="hover:text-foreground">Home</a>
-          <a href="/about" className="hover:text-foreground">About Us</a>
-          <a href="/services" className="hover:text-foreground">Services</a>
+          <a href="/#about" className="hover:text-foreground">About Us</a>
+          <a href="/#services" className="hover:text-foreground">Services</a>
           <a href="/free-listing-assessment" className="hover:text-foreground">Free Listing Assessment</a>
           <a href="/case-studies" className="hover:text-foreground">Case Studies</a>
           <a href="/careers" className="hover:text-foreground">Careers</a>
