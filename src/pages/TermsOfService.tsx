@@ -83,7 +83,9 @@ const TermsOfService = () => {
                     18585 Coastal Hwy Unit 10 PMB 1089<br />
                     Rehoboth Beach, DE 19971-6147, United States
                   </p>
-                  <p>Email: partnerships@zlix.com</p>
+                  <p className="mb-2">India Office: SCO 344 orchid harmony, near palanpore firestation, gauravpath road, Pal Adajan surat 395009</p>
+                  <p className="mb-2">Email: sales@zlixinc.com | harsh@aspirebit.com</p>
+                  <p>Phone: +1 (416) 717-7856</p>
                 </div>
               </section>
             </div>

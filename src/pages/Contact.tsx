@@ -22,14 +22,14 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    Canada Headquarters
+                    Canada - Ontario
                   </CardTitle>
-                  <CardDescription>Our main office location</CardDescription>
+                  <CardDescription>Headquarters</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
@@ -45,9 +45,26 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    USA Office
+                    Canada - Alberta
                   </CardTitle>
-                  <CardDescription>Our United States presence</CardDescription>
+                  <CardDescription>Mailing address</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p>76 Riverbrook way SE</p>
+                    <p>Calgary, Alberta, T2C3R6</p>
+                    <p>Canada</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-primary" />
+                    USA - Delaware
+                  </CardTitle>
+                  <CardDescription>US headquarters</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
@@ -58,18 +75,20 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-            </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Mail className="h-5 w-5 text-primary" />
-                    Email
+                    <MapPin className="h-5 w-5 text-primary" />
+                    USA - New York
                   </CardTitle>
+                  <CardDescription>New York office</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">partnerships@zlix.com</p>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p>New York Office</p>
+                    <p>United States</p>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -77,13 +96,47 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    Mailing Address
+                    India Office
+                  </CardTitle>
+                  <CardDescription>Development center</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p>SCO 344 orchid harmony</p>
+                    <p>Near palanpore firestation</p>
+                    <p>Gauravpath road, Pal Adajan</p>
+                    <p>Surat 395009, India</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Mail className="h-5 w-5 text-primary" />
+                    Email Addresses
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p>sales@zlixinc.com</p>
+                    <p>harsh@aspirebit.com</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Phone className="h-5 w-5 text-primary" />
+                    Phone
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-muted-foreground">
-                    <p>76 Riverbrook way SE</p>
-                    <p>Calgary, Alberta, T2C3R6</p>
+                    <p>+1 (416) 717-7856</p>
                   </div>
                 </CardContent>
               </Card>
@@ -117,7 +170,7 @@ const Contact = () => {
                   <Button 
                     size="lg" 
                     className="w-full md:w-auto"
-                    onClick={() => window.location.href = 'mailto:partnerships@zlix.com?subject=Brand Partnership Inquiry'}
+                    onClick={() => window.location.href = 'mailto:sales@zlixinc.com?subject=Brand Partnership Inquiry'}
                   >
                     Start Partnership Discussion
                   </Button>
