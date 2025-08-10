@@ -6,14 +6,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Amazon Wholesale Partner | USA, Canada, Mexico</title>
+        <title>Amazon Wholesale Partner for your Brand | USA, Canada, Mexico</title>
         <meta name="description" content="We help brands scale on Amazon worldwide with a specialty in USA, Canada, and Mexico. Wholesale and marketplace growth partner." />
         <link rel="canonical" href="https://yourbrand.com/" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "ZLIX INC",
-          url: "https://yourbrand.com/",
+          url: "https://zlixinc.com/",
           areaServed: ["US", "CA", "MX"],
           description: "Amazon wholesale and marketplace growth partner",
           sameAs: [
@@ -43,8 +43,10 @@ const Index = () => {
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-muted-foreground">
               <div className="flex items-center justify-center gap-2"><Shield className="opacity-70" /> Authorized seller</div>
               <div className="flex items-center justify-center gap-2"><Globe2 className="opacity-70" /> North America focus</div>
-              <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 100k+ products/month</div>
+              <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 100k+ Sales/month</div>
               <div className="flex items-center justify-center gap-2"><Check className="opacity-70" /> 10+ brands worldwide</div>
+              <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 7 Figure Revenue/year</div>
+
             </div>
           </div>
         </section>
