@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Check, Shield, ShoppingBag, Megaphone, Store } from "lucide-react";
+import { Check, Shield, ShoppingBag, Megaphone, Store, Package, Truck } from "lucide-react";
 
 const Services = () => {
   return (
@@ -17,10 +17,12 @@ const Services = () => {
         </header>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[ 
+          {[
             { icon: Shield, title: "Brand Protection", desc: "MAP, contribution control, and unauthorized seller removal." },
             { icon: ShoppingBag, title: "Wholesale Operations", desc: "Reliable POs, in-stock SLAs, and FBA-first replenishment." },
             { icon: Check, title: "Listing Excellence", desc: "A+ Content, Amazon SEO, and conversion-focused creative." },
+            { icon: Package, title: "FBA Operations", desc: "Inbound, prep, restock discipline, and inventory forecasting." },
+            { icon: Truck, title: "FBM Capability", desc: "Fast merchant-fulfilled dispatch for seasonal or oversized SKUs." },
             { icon: Megaphone, title: "Ads That Compound", desc: "Amazon & Walmart ads plus Meta/Google to boost demand." },
             { icon: Store, title: "DTC & Shopify", desc: "Build/optimize your Shopify store to complement marketplace growth." },
             { icon: Check, title: "Analytics & Reporting", desc: "Clear weekly reporting and retail-aware insights." },

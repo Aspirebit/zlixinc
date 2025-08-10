@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { Check, Globe2, Shield, ShoppingBag } from "lucide-react";
+import { Check, Globe2, Shield, ShoppingBag, Star, Package, Truck } from "lucide-react";
 
 const Index = () => {
   return (
@@ -40,10 +40,6 @@ const Index = () => {
               <a href="#contact"><Button variant="hero" size="lg">Become a Partner</Button></a>
               <a href="/free-listing-assessment"><Button variant="outline" size="lg">Free Listing Assessment</Button></a>
             </div>
-            <div className="mt-10 flex items-center justify-center gap-10">
-              <img src="/images/amazon.svg" alt="Amazon marketplace" className="h-10 md:h-14 opacity-90" loading="lazy" />
-              <img src="/images/walmart.svg" alt="Walmart marketplace" className="h-10 md:h-14 opacity-90" loading="lazy" />
-            </div>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-muted-foreground">
               <div className="flex items-center justify-center gap-2"><Shield className="opacity-70" /> Authorized seller</div>
               <div className="flex items-center justify-center gap-2"><Globe2 className="opacity-70" /> North America focus</div>
@@ -82,12 +78,14 @@ const Index = () => {
         <section id="services" className="border-t">
           <div className="container py-16 md:py-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center">What we do for partners</h2>
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { icon: Shield, title: "Brand Protection", desc: "MAP enforcement, unauthorized seller monitoring, and compliance." },
                 { icon: ShoppingBag, title: "Wholesale Purchasing", desc: "Consistent wholesale orders with predictable terms and timelines." },
                 { icon: Globe2, title: "Global Reach", desc: "Focus on USA, Canada, Mexico with marketplace-specific strategy." },
                 { icon: Check, title: "Listing Excellence", desc: "SEO-driven copy, A+ content, and conversion-focused images." },
+                { icon: Package, title: "FBA Operations", desc: "Inbound, prep, inventory forecasting, and restock discipline." },
+                { icon: Truck, title: "FBM Capability", desc: "Fast merchant-fulfilled dispatch for seasonal or oversized SKUs." },
               ].map(({ icon: Icon, title, desc }) => (
                 <article key={title} className="rounded-lg border p-6 transition-transform duration-200 hover:-translate-y-0.5">
                   <Icon className="text-[hsl(var(--primary))]" />
@@ -103,15 +101,49 @@ const Index = () => {
         <section id="marketplaces" className="border-t">
           <div className="container py-16 md:py-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center">Primary marketplaces</h2>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { name: "Amazon", note: "Primary growth focus" },
-                { name: "Walmart", note: "Selective assortment" },
-              ].map(({ name, note }) => (
-                <div key={name} className="rounded-lg border p-8">
-                  <div className="text-lg font-medium">{name}</div>
+                { name: "Amazon", note: "Primary growth focus", logo: "/images/amazon.svg", alt: "Amazon logo for marketplace focus" },
+                { name: "Walmart", note: "Selective assortment", logo: "/images/walmart.svg", alt: "Walmart logo for marketplace focus" },
+              ].map(({ name, note, logo, alt }) => (
+                <div key={name} className="rounded-lg border p-8 flex flex-col items-center text-center">
+                  <img src={logo} alt={alt} className="h-10 md:h-14 opacity-90" loading="lazy" />
+                  <div className="mt-4 text-lg font-medium">{name}</div>
                   <div className="mt-1 text-sm text-muted-foreground">{note}</div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section id="reviews" className="border-t">
+          <div className="container py-16 md:py-20">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center">What partners say</h2>
+            <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  quote: "ZLIX stabilized our buy box and compounded growth with retail-aware ads.",
+                  name: "Director of Ecommerce, Electronics",
+                },
+                {
+                  quote: "Clear reporting, disciplined FBA, and creative that actually converts.",
+                  name: "VP Sales, Beauty & Personal Care",
+                },
+                {
+                  quote: "Affiliate pushes plus Amazon Ads gave us predictable, profitable scale.",
+                  name: "Founder, Fitness & Outdoors",
+                },
+              ].map((r) => (
+                <article key={r.name} className="rounded-lg border p-6">
+                  <div className="flex gap-1 text-[hsl(var(--primary))]" aria-label="5 star rating">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4" />
+                    ))}
+                  </div>
+                  <p className="mt-3 text-sm text-foreground/90">“{r.quote}”</p>
+                  <p className="mt-2 text-xs text-muted-foreground">{r.name}</p>
+                </article>
               ))}
             </div>
           </div>

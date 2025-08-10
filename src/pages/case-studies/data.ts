@@ -115,4 +115,24 @@ export const caseStudies: CaseStudy[] = [
       "Pricing parity and promo calendar around peak weeks",
     ],
   },
+  {
+    slug: "home-kitchen-efficiency",
+    title: "Home & Kitchen: Packaging efficiency and retail readiness",
+    category: "Home & Kitchen",
+    timeframe: "6 months",
+    summary:
+      "Retail readiness program focused on packaging improvements, contribution consolidation, and seasonal promo calendar; scaled ads after conversion lifted.",
+    metrics: {
+      revenueLift: "+220%",
+      unitsPerMonth: "4,000 ➜ 12,000",
+      buyBox: "95% average",
+      reviewGrowth: "+500 net reviews",
+    },
+    strategies: [
+      "Packaging updates to reduce damage rate below 0.5%",
+      "Parent/child consolidation and hero SKU focus",
+      "Coupons and Deals aligned to seasonal peaks",
+      "Sponsored Products/Brands with exact and phrase clusters",
+    ],
+  },
 ];
