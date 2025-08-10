@@ -63,6 +63,42 @@ const Contact = () => {
               </Card>
             </div>
 
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-primary" />
+                    USA Warehouse
+                  </CardTitle>
+                  <CardDescription>Primary storage & dispatch</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p><strong>ZLIX INC</strong></p>
+                    <p>9 N Fork Eagle Mountain Rd</p>
+                    <p>Columbus, Montana, USA 59019-7379</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-primary" />
+                    USA Mailing Address
+                  </CardTitle>
+                  <CardDescription>Official correspondence</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p><strong>ZLIX INC</strong></p>
+                    <p>115 ZABRISKIE ST FL 2</p>
+                    <p>Jersey City, NJ, USA 07307</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
             <div className="mb-12">
               <Card>
                 <CardHeader>
@@ -70,7 +106,7 @@ const Contact = () => {
                     <MapPin className="h-5 w-5 text-primary" />
                     India Office
                   </CardTitle>
-                  <CardDescription>Development center</CardDescription>
+                  <CardDescription>Sourcing center</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
@@ -87,7 +123,7 @@ const Contact = () => {
               <Card className="max-w-3xl mx-auto">
                 <CardHeader>
                   <CardTitle>Tell us about your brand</CardTitle>
-                  <CardDescription>Amazon & Walmart focus. Phone is optional.</CardDescription>
+                  <CardDescription>Amazon & Walmart focus. We reply within 24 hours.</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <LeadForm />
@@ -97,8 +133,8 @@ const Contact = () => {
 
             <div className="grid md:grid-cols-2 gap-6 mb-12 justify-center">
               <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                <CardHeader className="text-center">
+                  <CardTitle className="flex items-center justify-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />
                     Email Address
                   </CardTitle>
@@ -111,8 +147,8 @@ const Contact = () => {
               </Card>
 
               <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                <CardHeader className="text-center">
+                  <CardTitle className="flex items-center justify-center gap-2">
                     <Phone className="h-5 w-5 text-primary" />
                     Business Hours
                   </CardTitle>

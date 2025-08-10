@@ -11,12 +11,14 @@ import { useToast } from "@/hooks/use-toast";
 const schema = z.object({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Enter a valid email"),
-  phone: z.string().min(7, "Enter a valid phone").optional(),
+  phone: z.string().regex(/^\d{10}$/, "Enter a 10-digit phone number"),
   company: z.string().min(2, "Enter your company name"),
   website: z.string().url().optional().or(z.literal("")).optional(),
   marketplace: z.enum(["amazon", "walmart", "both"], { required_error: "Select a marketplace" }),
-  monthlyRevenue: z.string().optional(),
-  catalogSize: z.string().optional(),
+  monthlyRevenue: z.string().min(1, "Monthly revenue is required"),
+  catalogSize: z.string().min(1, "Catalog size is required"),
+  country: z.string().min(2, "Country is required"),
+  address: z.string().min(5, "Address is required"),
   message: z.string().min(10, "Tell us a bit more about your goals")
 });
 
@@ -35,6 +37,8 @@ const LeadForm = () => {
       marketplace: undefined as unknown as "amazon" | "walmart" | "both",
       monthlyRevenue: "",
       catalogSize: "",
+      country: "",
+      address: "",
       message: "",
     },
   });
@@ -44,12 +48,14 @@ const LeadForm = () => {
     const body = [
       `Name: ${values.name}`,
       `Email: ${values.email}`,
-      values.phone ? `Phone: ${values.phone}` : undefined,
+      `Phone: ${values.phone}`,
       `Company: ${values.company}`,
       values.website ? `Website: ${values.website}` : undefined,
       `Marketplace: ${values.marketplace}`,
-      values.monthlyRevenue ? `Monthly Revenue: ${values.monthlyRevenue}` : undefined,
-      values.catalogSize ? `Catalog Size: ${values.catalogSize}` : undefined,
+      `Monthly Revenue: ${values.monthlyRevenue}`,
+      `Catalog Size: ${values.catalogSize}`,
+      `Country: ${values.country}`,
+      `Address: ${values.address}`,
       "",
       "Message:",
       values.message,
@@ -90,9 +96,9 @@ const LeadForm = () => {
           <div className="grid sm:grid-cols-2 gap-4">
             <FormField name="phone" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone (optional)</FormLabel>
+                <FormLabel>Phone</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="+1 555 000 0000" {...field} />
+                  <Input type="tel" inputMode="numeric" pattern="[0-9]*" maxLength={10} placeholder="10-digit phone (numbers only)" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -129,7 +135,7 @@ const LeadForm = () => {
             )} />
             <FormField name="monthlyRevenue" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>Monthly revenue (optional)</FormLabel>
+                <FormLabel>Monthly revenue</FormLabel>
                 <FormControl>
                   <Input placeholder="$50k" {...field} />
                 </FormControl>
@@ -138,9 +144,30 @@ const LeadForm = () => {
             )} />
           </div>
 
+          <div className="grid sm:grid-cols-2 gap-4">
+            <FormField name="address" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>Address</FormLabel>
+                <FormControl>
+                  <Input placeholder="Street, City, State / Province, ZIP" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField name="country" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>Country</FormLabel>
+                <FormControl>
+                  <Input placeholder="United States" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+          </div>
+
           <FormField name="catalogSize" control={form.control} render={({ field }) => (
             <FormItem>
-              <FormLabel>Catalog size (optional)</FormLabel>
+              <FormLabel>Catalog size</FormLabel>
               <FormControl>
                 <Input placeholder="e.g., 25 SKUs" {...field} />
               </FormControl>
@@ -159,11 +186,11 @@ const LeadForm = () => {
           )} />
 
           <div className="pt-2">
-            <Button type="submit" size="lg" className="w-full sm:w-auto">Submit Lead</Button>
+            <Button type="submit" size="lg" className="w-full sm:w-auto">Scale My Brand</Button>
           </div>
         </form>
       </Form>
-      <p className="mt-2 text-xs text-muted-foreground text-center">Your information is sent securely to sales@zlixinc.com. Phone is optional.</p>
+      <p className="mt-2 text-xs text-muted-foreground text-center">Your information is sent securely to sales@zlixinc.com.</p>
     </div>
   );
 };

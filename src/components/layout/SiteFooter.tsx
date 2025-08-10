@@ -4,8 +4,7 @@ const SiteFooter = () => {
   return (
     <footer className="border-t">
       <div className="container py-10 flex flex-col items-center gap-8 text-sm text-muted-foreground">
-        <img src="/lovable-uploads/9967362a-9b29-499c-9477-d392d1eb563a.png" alt="ZLIX INC logo" className="h-8 w-8 rounded-sm" />
-        <p className="text-center text-base italic text-foreground/80">"We earn trust by protecting brands and compounding results on Amazon."</p>
+        <img src="/lovable-uploads/9967362a-9b29-499c-9477-d392d1eb563a.png" alt="ZLIX INC logo" className="h-16 w-16 rounded-sm" />
 
         <nav className="flex flex-wrap items-center justify-center gap-6">
           <a href="/" className="hover:text-foreground">Home</a>

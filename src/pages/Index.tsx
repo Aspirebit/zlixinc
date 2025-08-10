@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { Check, Globe2, Shield, ShoppingBag, Star, Package, Truck } from "lucide-react";
+import { Check, Globe2, Shield, ShoppingBag, Package, Truck } from "lucide-react";
+import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 
 const Index = () => {
   return (
@@ -28,23 +29,29 @@ const Index = () => {
 
       <main>
         {/* Hero */}
-        <section className="container py-20 md:py-28">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-              Trusted Amazon Wholesale Partner for Growing Brands
-            </h1>
-            <p className="mt-5 text-lg text-muted-foreground">
-              We operate at scale on Amazon (primary) and Walmart. We run high‑ROI ads across Amazon, Walmart, Meta, and Google — amplified by 500+ affiliates. 10+ years in digital marketing and 5+ years in Amazon operations.
-            </p>
-            <div className="mt-8 flex items-center justify-center gap-3">
-              <a href="#contact"><Button variant="hero" size="lg">Become a Partner</Button></a>
-              <a href="/free-listing-assessment"><Button variant="outline" size="lg">Free Listing Assessment</Button></a>
-            </div>
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-muted-foreground">
-              <div className="flex items-center justify-center gap-2"><Shield className="opacity-70" /> Authorized seller</div>
-              <div className="flex items-center justify-center gap-2"><Globe2 className="opacity-70" /> North America focus</div>
-              <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 100k+ Sales/month</div>
-              <div className="flex items-center justify-center gap-2"><Check className="opacity-70" /> 10+ brands worldwide</div>
+        <section className="relative py-20 md:py-28">
+          <div className="absolute inset-0 -z-10">
+            <img src="/images/fulfillment-hero.jpg" alt="Amazon fulfillment center background" className="h-full w-full object-cover opacity-30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background" />
+          </div>
+          <div className="container">
+            <div className="mx-auto max-w-3xl text-center">
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
+                Trusted Amazon Wholesale Partner for Growing Brands
+              </h1>
+              <p className="mt-5 text-lg text-muted-foreground">
+                We operate at scale on Amazon (primary) and Walmart. We run high‑ROI ads across Amazon, Walmart, Meta, and Google — amplified by 500+ affiliates. 10+ years in digital marketing and 5+ years in Amazon operations.
+              </p>
+              <div className="mt-8 flex items-center justify-center gap-3">
+                <a href="#contact"><Button variant="hero" size="lg">Become a Partner</Button></a>
+                <a href="/free-listing-assessment"><Button variant="outline" size="lg">Free Listing Assessment</Button></a>
+              </div>
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-2"><Shield className="opacity-70" /> Authorized seller</div>
+                <div className="flex items-center justify-center gap-2"><Globe2 className="opacity-70" /> North America focus</div>
+                <div className="flex items-center justify-center gap-2"><ShoppingBag className="opacity-70" /> 100k+ Sales/month</div>
+                <div className="flex items-center justify-center gap-2"><Check className="opacity-70" /> 10+ brands worldwide</div>
+              </div>
             </div>
           </div>
         </section>
@@ -120,31 +127,8 @@ const Index = () => {
         <section id="reviews" className="border-t">
           <div className="container py-16 md:py-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center">What partners say</h2>
-            <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  quote: "ZLIX stabilized our buy box and compounded growth with retail-aware ads.",
-                  name: "Director of Ecommerce, Electronics",
-                },
-                {
-                  quote: "Clear reporting, disciplined FBA, and creative that actually converts.",
-                  name: "VP Sales, Beauty & Personal Care",
-                },
-                {
-                  quote: "Affiliate pushes plus Amazon Ads gave us predictable, profitable scale.",
-                  name: "Founder, Fitness & Outdoors",
-                },
-              ].map((r) => (
-                <article key={r.name} className="rounded-lg border p-6">
-                  <div className="flex gap-1 text-[hsl(var(--primary))]" aria-label="5 star rating">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4" />
-                    ))}
-                  </div>
-                  <p className="mt-3 text-sm text-foreground/90">“{r.quote}”</p>
-                  <p className="mt-2 text-xs text-muted-foreground">{r.name}</p>
-                </article>
-              ))}
+            <div className="mt-8">
+              <TestimonialsMarquee />
             </div>
           </div>
         </section>
