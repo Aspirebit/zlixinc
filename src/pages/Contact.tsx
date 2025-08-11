@@ -25,6 +25,18 @@ const Contact = () => {
               </p>
             </div>
 
+            <div className="mb-12">
+              <Card className="max-w-3xl mx-auto">
+                <CardHeader>
+                  <CardTitle>Tell us about your brand</CardTitle>
+                  <CardDescription>Amazon & Walmart focus. We reply within 24 hours.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <LeadForm />
+                </CardContent>
+              </Card>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               <Card>
                 <CardHeader>
@@ -111,26 +123,12 @@ const Contact = () => {
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
                     <p><strong>ZLIX INC</strong></p>
-                    <p>SCO 344 orchid harmony</p>
-                    <p>Near palanpore firestation</p>
-                    <p>Gauravpath road, Pal Adajan</p>
-                    <p>Surat 395009, India</p>
+                    <p>SCO 344 Orchid Harmony, Near Palanpore Fire Station, Gauravpath Road, Pal Adajan, Surat 395009, India</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="mb-12">
-              <Card className="max-w-3xl mx-auto">
-                <CardHeader>
-                  <CardTitle>Tell us about your brand</CardTitle>
-                  <CardDescription>Amazon & Walmart focus. We reply within 24 hours.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <LeadForm />
-                </CardContent>
-              </Card>
-            </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12 justify-center">
               <Card>
