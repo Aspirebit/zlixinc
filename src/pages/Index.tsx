@@ -160,14 +160,14 @@ const Index = () => {
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Let’s grow your brand on Amazon</h2>
               <p className="mt-3 text-muted-foreground">We typically generate 7‑figure annual revenue for partners. Share your catalog and we’ll get back within 24 hours.</p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <a href="mailto:sales@zlixinc.com" className="w-full">
-                  <Button className="w-full" variant="hero">Email us</Button>
-                </a>
-                <a href="#process" className="w-full">
-                  <Button className="w-full" variant="outline">See our process</Button>
-                </a>
-              </div>
+                <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  <Button asChild className="w-full" variant="hero">
+                    <a href="mailto:sales@zlixinc.com">Email us</a>
+                  </Button>
+                  <Button asChild className="w-full" variant="outline">
+                    <a href="#process">See our process</a>
+                  </Button>
+                </div>
               <p className="mt-4 text-xs text-muted-foreground">Serving USA, Canada, and Mexico. Wholesale and marketplace channels only.</p>
             </div>
           </div>

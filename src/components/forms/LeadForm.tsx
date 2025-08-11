@@ -185,8 +185,8 @@ const LeadForm = () => {
             </FormItem>
           )} />
 
-          <div className="pt-2">
-            <Button type="submit" size="lg" className="w-full sm:w-auto">Scale My Brand</Button>
+          <div className="pt-2 flex justify-center">
+            <Button type="submit" size="lg" className="px-8 py-6 text-base">Scale My Brand</Button>
           </div>
         </form>
       </Form>
