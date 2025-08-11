@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import HeroBanner from "@/components/HeroBanner";
 
 const Careers = () => {
   return (
@@ -11,9 +10,11 @@ const Careers = () => {
         <link rel="canonical" href="https://yourbrand.com/careers" />
       </Helmet>
 
-      <HeroBanner title="Careers at ZLIX INC" subtitle="We’re building an agile marketplace team focused on brand trust and compounding results. Remote-friendly." imageSrc="/images/contact-hero.jpg" alt="Careers at ZLIX" />
-
       <section className="container py-12 md:py-16">
+        <header className="max-w-3xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Careers at ZLIX INC</h1>
+          <p className="mt-4 text-muted-foreground">We’re building an agile marketplace team focused on brand trust and compounding results. Remote-friendly.</p>
+        </header>
 
         <div className="mt-10 max-w-3xl mx-auto grid gap-6">
           {[ 

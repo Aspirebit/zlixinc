@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { caseStudies } from "./case-studies/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import HeroBanner from "@/components/HeroBanner";
-import meetingHero from "@/assets/meeting-hero.jpg";
 
 const CaseStudies = () => {
   return (
@@ -18,14 +16,12 @@ const CaseStudies = () => {
         <link rel="canonical" href="https://yourbrand.com/case-studies" />
       </Helmet>
 
-      <HeroBanner
-        title="Amazon Case Studies"
-        subtitle="Proof of performance across the US, Canada, and Mexico marketplaces. We partner long-term and scale responsibly."
-        imageSrc={meetingHero}
-        alt="Case studies background"
-      />
 
       <div className="container py-12 md:py-16">
+        <header className="text-center max-w-3xl mx-auto mb-12">
+          <h1 className="text-4xl font-semibold tracking-tight">Amazon Case Studies</h1>
+          <p className="mt-3 text-muted-foreground">Proof of performance across the US, Canada, and Mexico marketplaces. We partner long-term and scale responsibly.</p>
+        </header>
         <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {caseStudies.map((cs) => (
             <Card key={cs.slug}>
