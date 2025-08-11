@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import HeroBanner from "@/components/HeroBanner";
 
 const PrivacyPolicy = () => {
   return (
@@ -9,10 +10,12 @@ const PrivacyPolicy = () => {
         <link rel="canonical" href="https://yourbrand.com/privacy-policy" />
       </Helmet>
       
+      <HeroBanner title="Privacy Policy" subtitle={"Last updated: " + new Date().toLocaleDateString()} imageSrc="/images/contact-hero.jpg" alt="Privacy policy background" />
+      
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-foreground mb-8">Privacy Policy</h1>
+            <h2 className="text-xl font-semibold text-foreground mb-6">Privacy Policy</h2>
             
             <div className="prose prose-gray dark:prose-invert max-w-none">
               <p className="text-muted-foreground mb-6">

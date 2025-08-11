@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import HeroBanner from "@/components/HeroBanner";
 import { Check, Shield, ShoppingBag, Megaphone, Store, Package, Truck } from "lucide-react";
 
 const Services = () => {
@@ -10,11 +11,9 @@ const Services = () => {
         <link rel="canonical" href="https://yourbrand.com/services" />
       </Helmet>
 
-      <section className="container py-16 md:py-20">
-        <header className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Services built to earn your LOA</h1>
-          <p className="mt-4 text-muted-foreground">Amazon authority with Walmart expansion. 10+ years in digital marketing, 5+ years in Amazon operations, and an affiliate network of 500+ creators.</p>
-        </header>
+      <HeroBanner title="Services built to earn your LOA" subtitle="Amazon authority with Walmart expansion. 10+ years in digital marketing, 5+ years in Amazon operations, and an affiliate network of 500+ creators." imageSrc="/images/fulfillment-hero.jpg" alt="Amazon services operations" />
+
+      <section className="container py-12 md:py-16">
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import LeadForm from "@/components/forms/LeadForm";
+import HeroBanner from "@/components/HeroBanner";
 
 const FreeListingAssessment = () => {
   return (
@@ -10,11 +11,9 @@ const FreeListingAssessment = () => {
         <link rel="canonical" href="https://yourbrand.com/free-listing-assessment" />
       </Helmet>
 
-      <section className="container py-16 md:py-20">
-        <header className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Free Amazon Listing Assessment</h1>
-          <p className="mt-4 text-muted-foreground">We’ll review SEO, A+ Content, images, reviews, and ads readiness. Expect clear, prioritized recommendations.</p>
-        </header>
+      <HeroBanner title="Free Amazon Listing Assessment" subtitle="We’ll review SEO, A+ Content, images, reviews, and ads readiness. Expect clear, prioritized recommendations." imageSrc="/images/fulfillment-hero.jpg" alt="Listing assessment background" />
+
+      <section className="container py-12 md:py-16">
 
         <div className="mt-10 max-w-3xl mx-auto">
           <LeadForm />

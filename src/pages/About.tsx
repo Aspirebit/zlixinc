@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import HeroBanner from "@/components/HeroBanner";
 
 const About = () => {
   return (
@@ -9,11 +10,9 @@ const About = () => {
         <link rel="canonical" href="https://yourbrand.com/about" />
       </Helmet>
 
+      <HeroBanner title="About ZLIX INC" subtitle="Amazon-first wholesale partner with Walmart capability and full-funnel growth." imageSrc="/images/fulfillment-hero.jpg" alt="Amazon warehouse operations" />
+
       <div className="container py-16 md:py-20 max-w-4xl">
-        <header className="text-center mb-10">
-          <h1 className="text-4xl font-semibold tracking-tight">About ZLIX INC</h1>
-          <p className="mt-3 text-muted-foreground">Amazon-first wholesale partner with Walmart capability and full-funnel growth.</p>
-        </header>
 
         <section className="space-y-4">
           <p className="text-foreground/90">
