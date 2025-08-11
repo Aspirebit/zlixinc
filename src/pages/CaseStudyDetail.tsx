@@ -75,6 +75,34 @@ const CaseStudyDetail = () => {
           </Card>
         </section>
 
+        <section aria-labelledby="more-case-studies" className="mt-12">
+          <h2 id="more-case-studies" className="text-xl font-semibold mb-4">More case studies</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {caseStudies
+              .filter((c) => c.slug !== cs.slug)
+              .map((other) => (
+                <Card key={other.slug}>
+                  <CardHeader>
+                    <CardTitle className="text-lg">{other.title}</CardTitle>
+                    <CardDescription>
+                      {other.category} • {other.timeframe}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{other.summary}</p>
+                    <div className="mt-4">
+                      <Button asChild size="sm">
+                        <Link to={`/case-studies/${other.slug}`} aria-label={`Read case study: ${other.title}`}>
+                          View case study
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+          </div>
+        </section>
+
         <footer className="mt-10 text-center">
           <Button asChild>
             <Link to="/contact">Discuss a partnership</Link>
