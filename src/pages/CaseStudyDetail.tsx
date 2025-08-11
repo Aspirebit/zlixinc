@@ -21,6 +21,11 @@ const CaseStudyDetail = () => {
     );
   }
 
+  const others = caseStudies.filter((c) => c.slug !== cs.slug);
+  const count = others.length;
+  const smSpan = count % 2 === 1;
+  const lgSpan = count % 3 === 1;
+
   return (
     <div className="container py-16 md:py-20">
       <Helmet>
@@ -78,10 +83,11 @@ const CaseStudyDetail = () => {
         <section aria-labelledby="more-case-studies" className="mt-12">
           <h2 id="more-case-studies" className="text-xl font-semibold mb-4">More case studies</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {caseStudies
-              .filter((c) => c.slug !== cs.slug)
-              .map((other) => (
-                <Card key={other.slug}>
+            {others.map((other, idx) => {
+              const isLast = idx === others.length - 1;
+              const spanClasses = isLast ? `${smSpan ? 'sm:col-span-2' : ''} ${lgSpan ? 'lg:col-span-3' : ''}`.trim() : '';
+              return (
+                <Card key={other.slug} className={spanClasses}>
                   <CardHeader>
                     <CardTitle className="text-lg">{other.title}</CardTitle>
                     <CardDescription>
@@ -99,7 +105,8 @@ const CaseStudyDetail = () => {
                     </div>
                   </CardContent>
                 </Card>
-              ))}
+              );
+            })}
           </div>
         </section>
 
