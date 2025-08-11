@@ -14,7 +14,108 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_messages: {
+        Row: {
+          company: string | null
+          consent: boolean | null
+          created_at: string
+          email: string | null
+          id: string
+          ip_address: string | null
+          message: string | null
+          name: string | null
+          phone: string | null
+          source_page: string | null
+          status: string | null
+          subject: string | null
+          updated_at: string
+          user_agent: string | null
+          utm_campaign: string | null
+          utm_medium: string | null
+          utm_source: string | null
+        }
+        Insert: {
+          company?: string | null
+          consent?: boolean | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: string | null
+          message?: string | null
+          name?: string | null
+          phone?: string | null
+          source_page?: string | null
+          status?: string | null
+          subject?: string | null
+          updated_at?: string
+          user_agent?: string | null
+          utm_campaign?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+        }
+        Update: {
+          company?: string | null
+          consent?: boolean | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: string | null
+          message?: string | null
+          name?: string | null
+          phone?: string | null
+          source_page?: string | null
+          status?: string | null
+          subject?: string | null
+          updated_at?: string
+          user_agent?: string | null
+          utm_campaign?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+        }
+        Relationships: []
+      }
+      email_subscriptions: {
+        Row: {
+          confirmed: boolean
+          confirmed_at: string | null
+          created_at: string
+          email: string
+          id: string
+          metadata: Json
+          source_page: string | null
+          subscribed: boolean
+          tags: string[]
+          unsubscribed_at: string | null
+          updated_at: string
+        }
+        Insert: {
+          confirmed?: boolean
+          confirmed_at?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          metadata?: Json
+          source_page?: string | null
+          subscribed?: boolean
+          tags?: string[]
+          unsubscribed_at?: string | null
+          updated_at?: string
+        }
+        Update: {
+          confirmed?: boolean
+          confirmed_at?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          metadata?: Json
+          source_page?: string | null
+          subscribed?: boolean
+          tags?: string[]
+          unsubscribed_at?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
