@@ -4,6 +4,7 @@ import { caseStudies } from "./case-studies/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import HeroBanner from "@/components/HeroBanner";
+import meetingHero from "@/assets/meeting-hero.jpg";
 
 const CaseStudies = () => {
   return (
@@ -20,7 +21,7 @@ const CaseStudies = () => {
       <HeroBanner
         title="Amazon Case Studies"
         subtitle="Proof of performance across the US, Canada, and Mexico marketplaces. We partner long-term and scale responsibly."
-        imageSrc="/images/contact-hero.jpg"
+        imageSrc={meetingHero}
         alt="Case studies background"
       />
 
