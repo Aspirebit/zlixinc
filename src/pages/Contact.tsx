@@ -48,9 +48,9 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    Canada - Alberta
+                    Canada Warehouse
                   </CardTitle>
-                  <CardDescription>Mailing address</CardDescription>
+                  <CardDescription>Warehouse</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
@@ -110,6 +110,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground">
+                    <p><strong>ZLIX INC</strong></p>
                     <p>SCO 344 orchid harmony</p>
                     <p>Near palanpore firestation</p>
                     <p>Gauravpath road, Pal Adajan</p>

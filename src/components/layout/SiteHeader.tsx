@@ -15,7 +15,7 @@ const SiteHeader = () => {
           <a href="/#process" className="hover:text-foreground transition-colors">Process</a>
           
           <Link to="/case-studies" className="hover:text-foreground transition-colors">Case Studies</Link>
-          <Link to="/careers" className="hover:text-foreground transition-colors">Careers</Link>
+          
           <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
         </nav>
         <div className="flex items-center gap-2">
