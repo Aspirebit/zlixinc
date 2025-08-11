@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Mail, Phone } from "lucide-react";
 import LeadForm from "@/components/forms/LeadForm";
+import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <>
@@ -172,11 +173,11 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <Button 
+                    asChild
                     size="lg" 
                     className="w-full md:w-auto"
-                    onClick={() => window.location.href = 'mailto:sales@zlixinc.com?subject=Brand Partnership Inquiry'}
                   >
-                    Start Partnership Discussion
+                    <Link to="/free-listing-assessment">Start Partnership Discussion</Link>
                   </Button>
                 </CardContent>
               </Card>
