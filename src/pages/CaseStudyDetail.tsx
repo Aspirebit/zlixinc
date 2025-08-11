@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { caseStudies } from "./case-studies/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import HeroBanner from "@/components/HeroBanner";
+
 
 const CaseStudyDetail = () => {
   const { slug } = useParams();
@@ -29,8 +29,10 @@ const CaseStudyDetail = () => {
         <link rel="canonical" href={`https://yourbrand.com/case-studies/${cs.slug}`} />
       </Helmet>
 
-      <HeroBanner title={cs.title} subtitle={`${cs.category} • ${cs.timeframe}`} imageSrc="/images/contact-hero.jpg" alt="Case study background" />
-
+      <header className="mx-auto max-w-4xl mb-8 text-center">
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">{cs.title}</h1>
+        <p className="mt-3 text-muted-foreground">{`${cs.category} • ${cs.timeframe}`}</p>
+      </header>
       <article className="mx-auto max-w-4xl">
 
         <section className="grid sm:grid-cols-2 gap-4 mb-8">
