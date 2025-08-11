@@ -9,6 +9,7 @@ const SiteHeader = () => {
           <img src="/lovable-uploads/4a0f4f9f-a11c-4e29-adb9-4d32e4ab24cb.png" alt="ZLIX INC brand logo" className="h-16 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
           <a href="/#about" className="hover:text-foreground transition-colors">About</a>
           <a href="/#services" className="hover:text-foreground transition-colors">Services</a>
           <a href="/#marketplaces" className="hover:text-foreground transition-colors">Marketplaces</a>

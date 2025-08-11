@@ -161,8 +161,8 @@ const Index = () => {
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Let’s grow your brand on Amazon</h2>
               <p className="mt-3 text-muted-foreground">We typically generate 7‑figure annual revenue for partners. Share your catalog and we’ll get back within 24 hours.</p>
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                  <Button asChild className="w-full" variant="hero">
-                    <a href="mailto:sales@zlixinc.com">Email us</a>
+                  <Button className="w-full" variant="hero" onClick={() => { window.location.href = 'mailto:sales@zlixinc.com'; }}>
+                    Email us
                   </Button>
                   <Button asChild className="w-full" variant="outline">
                     <a href="#process">See our process</a>
