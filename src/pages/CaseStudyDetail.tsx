@@ -29,7 +29,7 @@ const CaseStudyDetail = () => {
         <link rel="canonical" href={`https://yourbrand.com/case-studies/${cs.slug}`} />
       </Helmet>
 
-      <HeroBanner title={cs.title} subtitle={`${cs.category} • ${cs.timeframe}`} imageSrc="/images/fulfillment-hero.jpg" alt="Case study background" />
+      <HeroBanner title={cs.title} subtitle={`${cs.category} • ${cs.timeframe}`} imageSrc="/images/contact-hero.jpg" alt="Case study background" />
 
       <article className="mx-auto max-w-4xl">
 

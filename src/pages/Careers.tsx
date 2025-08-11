@@ -11,7 +11,7 @@ const Careers = () => {
         <link rel="canonical" href="https://yourbrand.com/careers" />
       </Helmet>
 
-      <HeroBanner title="Careers at ZLIX INC" subtitle="We’re building an agile marketplace team focused on brand trust and compounding results. Remote-friendly." imageSrc="/images/fulfillment-hero.jpg" alt="Careers at ZLIX" />
+      <HeroBanner title="Careers at ZLIX INC" subtitle="We’re building an agile marketplace team focused on brand trust and compounding results. Remote-friendly." imageSrc="/images/contact-hero.jpg" alt="Careers at ZLIX" />
 
       <section className="container py-12 md:py-16">
 

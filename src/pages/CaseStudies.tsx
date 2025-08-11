@@ -20,7 +20,7 @@ const CaseStudies = () => {
       <HeroBanner
         title="Amazon Case Studies"
         subtitle="Proof of performance across the US, Canada, and Mexico marketplaces. We partner long-term and scale responsibly."
-        imageSrc="/images/fulfillment-hero.jpg"
+        imageSrc="/images/contact-hero.jpg"
         alt="Case studies background"
       />
 
