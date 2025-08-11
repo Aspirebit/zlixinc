@@ -141,7 +141,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-muted-foreground text-center">
-                    <p>sales@zlixinc.com</p>
+                    <a href="mailto:sales@zlixinc.com" className="underline">sales@zlixinc.com</a>
                   </div>
                 </CardContent>
               </Card>

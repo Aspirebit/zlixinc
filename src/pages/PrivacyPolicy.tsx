@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
                 <div className="text-muted-foreground">
                   <p className="mb-2"><strong>ZLIX INC</strong></p>
                   <p className="mb-2">87 Hill Cress, Scarborough, ON, M1M1J3</p>
-                  <p className="mb-2">Email: sales@zlixinc.com</p>
+                  <p className="mb-2">Email: <a href="mailto:sales@zlixinc.com" className="underline">sales@zlixinc.com</a></p>
                 </div>
               </section>
             </div>
