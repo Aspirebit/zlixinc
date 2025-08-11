@@ -31,7 +31,7 @@ const Index = () => {
         {/* Hero */}
         <section className="relative py-20 md:py-28">
           <div className="absolute inset-0 -z-10">
-            <img src="/images/fulfillment-hero.jpg" alt="Amazon fulfillment center background" className="h-full w-full object-cover opacity-30" />
+            <img src="/images/fulfillment-hero.jpg" alt="Amazon fulfillment center background" className="h-full w-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background" />
           </div>
           <div className="container">

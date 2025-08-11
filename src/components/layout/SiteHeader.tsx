@@ -13,7 +13,7 @@ const SiteHeader = () => {
           <a href="/#services" className="hover:text-foreground transition-colors">Services</a>
           <a href="/#marketplaces" className="hover:text-foreground transition-colors">Marketplaces</a>
           <a href="/#process" className="hover:text-foreground transition-colors">Process</a>
-          <Link to="/free-listing-assessment" className="hover:text-foreground transition-colors">Free Listing Assessment</Link>
+          
           <Link to="/case-studies" className="hover:text-foreground transition-colors">Case Studies</Link>
           <Link to="/careers" className="hover:text-foreground transition-colors">Careers</Link>
           <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
