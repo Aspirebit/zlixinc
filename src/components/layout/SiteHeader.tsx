@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const SiteHeader = () => {
   return (
@@ -20,6 +22,31 @@ const SiteHeader = () => {
           <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
         </nav>
         <div className="flex items-center gap-2">
+          {/* Mobile menu */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" aria-label="Open menu">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-72">
+                <nav className="mt-8 grid gap-4 text-base text-muted-foreground">
+                  <a href="/#about" className="hover:text-foreground transition-colors">About</a>
+                  <a href="/#services" className="hover:text-foreground transition-colors">Services</a>
+                  <a href="/#marketplaces" className="hover:text-foreground transition-colors">Marketplaces</a>
+                  <a href="/#process" className="hover:text-foreground transition-colors">Process</a>
+                  <Link to="/case-studies" className="hover:text-foreground transition-colors">Case Studies</Link>
+                  <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
+                  <div className="pt-2">
+                    <Link to="/contact">
+                      <Button className="w-full" variant="hero" size="sm">Partner with us</Button>
+                    </Link>
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
           <Link to="/contact">
             <Button variant="hero" size="sm">Partner with us</Button>
           </Link>
