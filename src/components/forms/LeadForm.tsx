@@ -45,7 +45,7 @@ const LeadForm = () => {
 
   const onSubmit = (values: LeadFormValues) => {
     const subject = `New Lead: ${values.company} (${values.marketplace})`;
-    const body = [
+    const lines = [
       `Name: ${values.name}`,
       `Email: ${values.email}`,
       `Phone: ${values.phone}`,
@@ -59,9 +59,8 @@ const LeadForm = () => {
       "",
       "Message:",
       values.message,
-    ]
-      .filter(Boolean)
-      .join("%0D%0A");
+    ];
+    const body = encodeURIComponent(lines.filter(Boolean).join("\r\n"));
 
     const mailto = `mailto:sales@zlixinc.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     window.location.href = mailto;
@@ -190,7 +189,7 @@ const LeadForm = () => {
           </div>
         </form>
       </Form>
-      <p className="mt-2 text-xs text-muted-foreground text-center">Your information is sent securely to sales@zlixinc.com.</p>
+      <p className="mt-2 text-xs text-muted-foreground text-center">Your email client will open to send this message to sales@zlixinc.com.</p>
     </div>
   );
 };
