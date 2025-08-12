@@ -1,0 +1,62 @@
+name: Build and Zip
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Create dist.zip (static build)
+        run: |
+          cd ./
+          zip -qr dist.zip dist
+
+      - name: Create source.zip (full source, excluding heavy/irrelevant folders)
+        run: |
+          zip -qr source.zip . \
+            -x "node_modules/*" \
+            -x "dist/*" \
+            -x ".git/*" \
+            -x ".github/*" \
+            -x "**/*.zip" \
+            -x "**/.DS_Store" \
+            -x "bun.lockb" \
+            -x "package-lock.json"
+
+      - name: Upload artifact - static-dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-dist
+          path: dist.zip
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload artifact - full-source
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-source
+          path: source.zip
+          if-no-files-found: error
+          retention-days: 14
