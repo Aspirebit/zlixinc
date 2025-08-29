@@ -25,7 +25,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/zlixinc">
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Index />} />
