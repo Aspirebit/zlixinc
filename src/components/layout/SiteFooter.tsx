@@ -2,7 +2,7 @@ import { Linkedin, Facebook } from "lucide-react";
 const SiteFooter = () => {
   return <footer className="border-t">
       <div className="container py-10 flex flex-col items-center gap-8 text-sm text-muted-foreground">
-        <img src={`${import.meta.env.BASE_URL}lovable-uploads/9967362a-9b29-499c-9477-d392d1eb563a.png`} alt="ZLIX INC logo" className="h-24 w-auto" />
+        <img src="/zlixinc/lovable-uploads/9967362a-9b29-499c-9477-d392d1eb563a.png" alt="ZLIX INC logo" className="h-24 w-auto" />
 
         <nav className="flex flex-wrap items-center justify-center gap-6">
           <a href="/" className="hover:text-foreground">Home</a>

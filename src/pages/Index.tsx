@@ -31,7 +31,7 @@ const Index = () => {
         {/* Hero */}
         <section className="relative py-20 md:py-28">
           <div className="absolute inset-0 -z-10">
-            <img src={`${import.meta.env.BASE_URL}images/fulfillment-hero.jpg`} alt="Amazon fulfillment center background" className="h-full w-full object-cover opacity-50" />
+            <img src="/zlixinc/images/fulfillment-hero.jpg" alt="Amazon fulfillment center background" className="h-full w-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background" />
           </div>
           <div className="container">
@@ -110,8 +110,8 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center">Primary marketplaces</h2>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { name: "Amazon", note: "Primary growth focus", logo: `${import.meta.env.BASE_URL}images/amazon.svg`, alt: "Amazon logo for marketplace focus" },
-                { name: "Walmart", note: "Selective assortment", logo: `${import.meta.env.BASE_URL}images/walmart.svg`, alt: "Walmart logo for marketplace focus" },
+                { name: "Amazon", note: "Primary growth focus", logo: "/zlixinc/images/amazon.svg", alt: "Amazon logo for marketplace focus" },
+                { name: "Walmart", note: "Selective assortment", logo: "/zlixinc/images/walmart.svg", alt: "Walmart logo for marketplace focus" },
               ].map(({ name, note, logo, alt }) => (
                 <div key={name} className="rounded-lg border p-8 flex flex-col items-center text-center">
                   <img src={logo} alt={alt} className="h-10 md:h-14 opacity-90" loading="lazy" />
