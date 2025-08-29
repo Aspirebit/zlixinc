@@ -15,7 +15,7 @@ const Contact = () => {
       
       <div className="min-h-screen bg-background">
         <div className="w-full">
-          <img src="/images/contact-hero.jpg" alt="Contact ZLIX INC" className="w-full h-56 object-cover" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}images/contact-hero.jpg`} alt="Contact ZLIX INC" className="w-full h-56 object-cover" loading="lazy" />
         </div>
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
